@@ -1,12 +1,16 @@
+/* --------------------------------------------------
+   Base / Desktop Styles
+-------------------------------------------------- */
+
 /* Navbar container */
 .navbar {
   display: flex;
-  width: 100%; /* Default: Stretch to parent's width */
+  width: 100%;
   max-width: inherit;
   align-items: center;
   justify-content: space-between;
   height: 64px;
-  background: transparent; /* Transparent background */
+  background: transparent;
   position: fixed;
   top: 0;
   z-index: 1000;
@@ -22,29 +26,46 @@
 }
 
 .icon {
-  width: 220px; /* Adjust size of the icon */
+  width: 220px;
   height: 32px;
   cursor: pointer;
 }
 
-/* Buttons container (aligned to the right) */
+/* --------------------------------------------------
+   Buttons Container (Desktop)
+   We'll override for mobile in media query
+-------------------------------------------------- */
+
 .buttonsContainer {
+  /* 
+    On desktop, show everything normally.
+    On mobile, we'll absolutely position & animate it. 
+  */
   display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 100%;
-  background-color: "black";
+  position: static;
+  opacity: 1; /* fully visible on desktop */
+  transform: none;
+  pointer-events: auto;
+  transition: none; /* no transition on desktop */
+}
+
+/* The "open" class is used only on mobile, but no effect on desktop. */
+.buttonsContainer.open {
 }
 
 /* Black box behind buttons */
 .buttonsBox {
-  background: black; /* Black background behind buttons */
+  background: black;
   padding: 8px;
-  border-radius: 8px; /* Optional rounded corners */
+  border-radius: 8px;
   display: flex;
+  align-items: center;
   gap: 8px;
   border: 1px solid #262526;
-  gap: 8px;
+  height: 72px;
 }
 
 /* Individual button styles */
@@ -59,7 +80,13 @@
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
+  height: 48px;
 }
+
+.navButton:hover {
+  background: darkgray; /* Darken button background on hover */
+}
+
 .navGradientButton {
   background: linear-gradient(90deg, #6a0adf, #3a0579);
   color: white;
@@ -70,14 +97,153 @@
   transition: background 0.3s ease;
   font-weight: 500;
   font-size: 16px;
+  height: 48px;
 }
 
-.navButton:hover {
-  background: darkgray; /* Darken button background on hover */
-}
-
+/* Vertical spacer between button groups */
 .verticalSpacer {
-  width: 1px; /* Thin vertical line */
-  height: 90; /* Matches the height of the buttons */
-  background-color: #ccc; /* Line color */
+  width: 1px;
+  height: 48px;
+  background-color: #ccc;
+}
+
+/* --------------------------------------------------
+   Hamburger Toggle (Hidden by default on desktop)
+-------------------------------------------------- */
+
+.toggleButton {
+  display: none; /* show on mobile only */
+  position: relative;
+  width: 30px;
+  height: 30px;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* The three bars inside the toggle */
+.bar {
+  width: 30px;
+  height: px;
+  background-color: #fff; /* choose color to contrast your background */
+  margin: 4px 0;
+  color: rgb(0, 0, 0);
+  transition: 0.3s;
+}
+
+/* --------------------------------------------------
+   Mobile Styles (Below 768px)
+-------------------------------------------------- */
+@media (max-width: 1000px) {
+  /* Adjust navbar padding on mobile if desired */
+  .navbar {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+  }
+
+  /* Show the hamburger icon */
+  .toggleButton {
+    display: flex;
+    /* background-color: white; */
+  }
+
+  /* 
+    Turn the buttonsContainer into an absolute dropdown: hidden by default
+    We use opacity + transform + pointer-events for a smooth animation 
+  */
+  .buttonsContainer {
+    position: absolute;
+    top: 64px; /* just below navbar */
+    right: 16px;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+    height: 270px;
+  }
+
+  /* When open, fade and slide down */
+  .buttonsContainer.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* 
+    Buttons can be displayed in a column if you want 
+    them stacked on mobile
+  */
+  .buttonsBox {
+    flex-direction: column;
+    height: 270px;
+  }
+
+  /* Make buttons a bit wider or smaller if you want 
+     a different mobile style. Example:
+  */
+  .navButton,
+  .navGradientButton {
+    font-size: 14px;
+    width: 100%;
+    margin: 4px 0;
+  }
+
+  /* The vertical spacer might not make sense in a column layout */
+  .verticalSpacer {
+    display: none;
+  }
+}
+
+/* .toggleButton {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+} */
+
+.bar {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: rgb(134, 129, 129);
+  transition: all 0.3s ease-in-out;
+}
+
+.bar:nth-child(1) {
+  top: 6px;
+}
+
+.bar:nth-child(2) {
+  top: 12px;
+}
+
+.bar:nth-child(3) {
+  top: 18px;
+}
+
+.toggleButton[aria-expanded="true"] .bar:nth-child(1) {
+  transform: rotate(45deg);
+  top: 12px;
+}
+
+.toggleButton[aria-expanded="true"] .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.toggleButton[aria-expanded="true"] .bar:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 12px;
 }
