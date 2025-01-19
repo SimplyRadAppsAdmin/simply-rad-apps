@@ -94,7 +94,8 @@
 /* Small screens (e.g., mobile phones) */
 @media (max-width: 768px) {
   .hero {
-    padding: 0 10px; /* Further reduce padding for mobile screens */
+    padding: 0 10px;
+    text-align: center; /* Further reduce padding for mobile screens */
   }
 
   .heroContent h1 {
@@ -108,21 +109,5 @@
   .heroButton {
     font-size: 0.75rem; /* Adjust button font size for mobile */
     padding: 8px 16px; /* Adjust padding for mobile */
-  }
-}
-
-/* Extra small screens (e.g., very narrow devices) */
-@media (max-width: 480px) {
-  .heroContent h1 {
-    font-size: 2rem; /* Even smaller font size for very narrow screens */
-  }
-
-  .heroContent p {
-    font-size: 0.75rem; /* Reduce font size for very narrow screens */
-  }
-
-  .heroButton {
-    font-size: 0.65rem; /* Adjust button font size for very narrow screens */
-    padding: 6px 12px; /* Adjust padding for very narrow screens */
   }
 }
