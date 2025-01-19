@@ -26,7 +26,7 @@
 }
 
 .icon {
-  width: 150px;
+  width: 220px;
   height: 32px;
   cursor: pointer;
 }
@@ -139,6 +139,9 @@
    Mobile Styles (Below 768px)
 -------------------------------------------------- */
 @media (max-width: 1000px) {
+  .icon {
+    width: 150px;
+  }
   /* Adjust navbar padding on mobile if desired */
   .navbar {
     padding-left: 16px;
@@ -200,20 +203,6 @@
     display: none;
   }
 }
-
-/* .toggleButton {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  background: none;
-  border: none;
-  outline: none;
-} */
-
 .bar {
   position: absolute;
   width: 100%;
