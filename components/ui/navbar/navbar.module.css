@@ -1,0 +1,83 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  width: 100%; /* Default: Stretch to parent's width */
+  max-width: inherit;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  background: transparent; /* Transparent background */
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  padding-left: 97px;
+  padding-right: 96px;
+  padding-top: 45px;
+}
+
+/* Brand (icon aligned to the left) */
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 220px; /* Adjust size of the icon */
+  height: 32px;
+  cursor: pointer;
+}
+
+/* Buttons container (aligned to the right) */
+.buttonsContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  background-color: "black";
+}
+
+/* Black box behind buttons */
+.buttonsBox {
+  background: black; /* Black background behind buttons */
+  padding: 8px;
+  border-radius: 8px; /* Optional rounded corners */
+  display: flex;
+  gap: 8px;
+  border: 1px solid #262526;
+  gap: 8px;
+}
+
+/* Individual button styles */
+.navButton {
+  background: #262526;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+}
+.navGradientButton {
+  background: linear-gradient(90deg, #6a0adf, #3a0579);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.navButton:hover {
+  background: darkgray; /* Darken button background on hover */
+}
+
+.verticalSpacer {
+  width: 1px; /* Thin vertical line */
+  height: 90; /* Matches the height of the buttons */
+  background-color: #ccc; /* Line color */
+}
