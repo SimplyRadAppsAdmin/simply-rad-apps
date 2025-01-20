@@ -1,0 +1,30 @@
+.hero {
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background-color: transparent;
+  font-family: "Jost", Arial, sans-serif;
+}
+
+.heroContent h1 {
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 0.25%;
+  margin: 10px;
+  text-align: center;
+}
+
+.heroContent p {
+  font-size: 16px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Medium screens (e.g., tablets) */
+@media (max-width: 1300px) {
+}
+
+/* Small screens (e.g., mobile phones) */
+@media (max-width: 768px) {
+}

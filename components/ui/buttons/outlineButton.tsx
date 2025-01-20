@@ -65,6 +65,7 @@ const OutlineButton: React.FC<OutlineButtonProps> = ({
         borderRadius: borderRadius,
         padding: padding,
         cursor: "pointer",
+        fontWeight: 300,
         transition: "background-color 0.2s ease", // optional smooth transition
         ...style,
       }}

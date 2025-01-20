@@ -1,0 +1,43 @@
+.hero {
+  background-color: transparent;
+  font-family: "Jost", Arial, sans-serif;
+}
+
+.heroContent {
+  justify-items: center;
+  margin-bottom: 200px;
+}
+
+.heroContent h1 {
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 0.25%;
+  margin: 10px;
+  text-align: center;
+}
+
+.heroContent p {
+  font-size: 16px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  max-width: 1200px; /* Limit width for larger screens */
+}
+
+/* Medium screens (e.g., tablets) */
+@media (max-width: 1300px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+  }
+}
+
+/* Small screens (e.g., mobile phones) */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* Switch to single column layout for tablets and smaller screens */
+  }
+}

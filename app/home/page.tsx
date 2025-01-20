@@ -2,6 +2,8 @@ import HeroHeader from "./components/hero_header";
 import WhatWeDo from "./components/what_we_do";
 import RepeatedSineWave from "@/components/ui/wave-divider";
 import OurBackground from "./components/our_background";
+import ToolBelt from "./components/toolbelt";
+import LetsTalk from "./components/letsTalk";
 
 export default async function Home() {
   return (
@@ -40,6 +42,24 @@ export default async function Home() {
         waveStrokeWidth={2}
         lineStrokeColor="#6A0ADF66"
         lineStrokeWidth={2}
+      />
+      <ToolBelt
+        title="Here’s a look at our tool belt."
+        subtitle="These are just some of our favorites. We’ll make it work on whatever is best for you. "
+      />
+      <RepeatedSineWave
+        width={1440}
+        height={320}
+        amplitude={10}
+        frequency={6}
+        waveStrokeColor="#6A0ADF66"
+        waveStrokeWidth={2}
+        lineStrokeColor="#6A0ADF66"
+        lineStrokeWidth={2}
+      />
+      <LetsTalk
+        title="Ready to talk? Let’s chat!"
+        subtitle="Our calendar is flexible. Schedule a video or phone chat to see if we’re the right fit for you."
       />
     </div>
   );
