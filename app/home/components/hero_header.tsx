@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./heroheader.module.css"; // Import custom styles
+import { FaArrowRight } from "react-icons/fa";
 
 interface HeroHeaderProps {
   videoSrc: string; // Path to the background video
@@ -33,6 +34,12 @@ const HeroHeader: React.FC<HeroHeaderProps> = ({
             {buttonText}
           </button>
         )}
+        <div className={styles.card}>
+          Deploy & Maintain{" "}
+          <div className={styles.iconContainer}>
+            <FaArrowRight className={styles.icon} />
+          </div>
+        </div>
       </div>
     </div>
   );

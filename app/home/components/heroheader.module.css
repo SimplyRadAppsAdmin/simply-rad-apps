@@ -71,6 +71,25 @@
   background-color: #0056b3;
 }
 
+.card {
+  margin-top: 10%;
+  background: black;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 20px 40px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 30%;
+  height: 72px;
+}
 /* Medium screens (e.g., tablets) */
 @media (max-width: 1300px) {
   .hero {
@@ -88,6 +107,11 @@
   .heroButton {
     font-size: 0.875rem; /* Adjust button font size for tablets */
     padding: 10px 20px;
+  }
+  .card {
+    width: 400px;
+    justify-self: center;
+    margin-top: 40%;
   }
 }
 
@@ -110,4 +134,24 @@
     font-size: 0.75rem; /* Adjust button font size for mobile */
     padding: 8px 16px; /* Adjust padding for mobile */
   }
+}
+
+.iconContainer {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 5px;
+  justify-items: center;
+  align-content: center;
+}
+
+.icon {
+  width: 20px;
+  color: #545252;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
