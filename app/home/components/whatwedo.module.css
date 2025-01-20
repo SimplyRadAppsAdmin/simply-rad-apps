@@ -2,16 +2,9 @@
 .whatWeDo {
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
   justify-content: space-evenly;
   text-align: left;
   padding: 50px;
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 0) 20%,
-    rgba(0, 0, 0, 0.8) 60%,
-    rgba(0, 0, 0, 1) 100%
-  );
   color: white;
   position: relative;
   overflow: hidden;

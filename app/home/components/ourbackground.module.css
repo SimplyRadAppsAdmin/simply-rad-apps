@@ -1,0 +1,39 @@
+.hero {
+  margin-left: 8%;
+  justify-content: center;
+  background-color: transparent;
+  font-family: "Jost", Arial, sans-serif;
+}
+
+.heroContent h1 {
+  font-size: 40px;
+  line-height: 44px;
+  width: 611px;
+  letter-spacing: 0.25%;
+}
+
+.heroContent p {
+  font-size: 16px;
+  width: 611px;
+  margin-top: 40px;
+}
+
+/* Medium screens (e.g., tablets) */
+@media (max-width: 1300px) {
+}
+
+/* Small screens (e.g., mobile phones) */
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 40px;
+    line-height: 44px;
+    width: 350px;
+    letter-spacing: 0.25%;
+  }
+
+  .heroContent p {
+    font-size: 16px;
+    width: 350px;
+    margin-top: 20px;
+  }
+}

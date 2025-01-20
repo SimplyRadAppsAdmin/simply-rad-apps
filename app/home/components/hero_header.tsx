@@ -8,16 +8,12 @@ interface HeroHeaderProps {
   videoSrc: string; // Path to the background video
   title: string; // Header title
   subtitle?: string; // Optional subtitle
-  buttonText?: string; // Optional button text
-  onButtonClick?: () => void; // Optional button click handler
 }
 
 const HeroHeader: React.FC<HeroHeaderProps> = ({
   videoSrc,
   title,
   subtitle,
-  buttonText,
-  onButtonClick,
 }) => {
   return (
     <div className={styles.hero}>
@@ -31,11 +27,6 @@ const HeroHeader: React.FC<HeroHeaderProps> = ({
       <div className={styles.heroContent}>
         <h1>{title}</h1>
         {subtitle && <p>{subtitle}</p>}
-        {buttonText && (
-          <button onClick={onButtonClick} className={styles.heroButton}>
-            {buttonText}
-          </button>
-        )}
         <div className={styles.card}>
           <CardButton
             text="Schedule a video call with us"
