@@ -38,7 +38,7 @@ const HeroHeader: React.FC<HeroHeaderProps> = ({
         )}
         <div className={styles.card}>
           <CardButton
-            text="Deploy & Maintain"
+            text="Schedule a video call with us"
             arrowDirection="right"
             onClick={() => {}}
           />
