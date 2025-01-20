@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
 import styles from "./heroheader.module.css"; // Import custom styles
-import { FaArrowRight } from "react-icons/fa";
+import CardButton from "@/components/ui/buttons/cardButton";
 
 interface HeroHeaderProps {
   videoSrc: string; // Path to the background video
@@ -35,10 +37,11 @@ const HeroHeader: React.FC<HeroHeaderProps> = ({
           </button>
         )}
         <div className={styles.card}>
-          Deploy & Maintain{" "}
-          <div className={styles.iconContainer}>
-            <FaArrowRight className={styles.icon} />
-          </div>
+          <CardButton
+            text="Deploy & Maintain"
+            arrowDirection="right"
+            onClick={() => {}}
+          />
         </div>
       </div>
     </div>

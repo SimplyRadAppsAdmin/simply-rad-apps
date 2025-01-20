@@ -1,12 +1,7 @@
-import DeployButton from "@/components/deploy-button";
-import { EnvVarWarning } from "@/components/env-var-warning";
-import HeaderAuth from "@/components/header-auth";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { Geist } from "next/font/google";
 import { ThemeProvider } from "next-themes";
-import Link from "next/link";
 import "./globals.css";
-import Home from "./home/page";
 import Navbar from "@/components/ui/navbar/navbar";
 
 const defaultUrl = process.env.VERCEL_URL

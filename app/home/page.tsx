@@ -1,4 +1,3 @@
-import Hero from "@/components/hero";
 import HeroHeader from "./components/hero_header";
 import WhatWeDo from "./components/what_we_do";
 
