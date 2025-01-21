@@ -4,6 +4,7 @@ import RepeatedSineWave from "@/components/ui/wave-divider";
 import OurBackground from "./components/our_background";
 import ToolBelt from "./components/toolbelt";
 import LetsTalk from "./components/letsTalk";
+import Footer from "./components/footer";
 
 export default async function Home() {
   return (
@@ -61,6 +62,7 @@ export default async function Home() {
         title="Ready to talk? Let’s chat!"
         subtitle="Our calendar is flexible. Schedule a video or phone chat to see if we’re the right fit for you."
       />
+      <Footer />
     </div>
   );
 }

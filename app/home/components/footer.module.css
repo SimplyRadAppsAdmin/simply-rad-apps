@@ -1,0 +1,111 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 50px auto;
+  font-family: "Jost", Arial, sans-serif;
+  position: relative; /* Important for pseudo-elements positioning */
+}
+
+.left h1 {
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 0.25%;
+  margin: 10px;
+  text-align: left;
+}
+
+.container > *:not(:last-child) {
+  position: relative;
+}
+
+.left {
+  text-align: center;
+  flex: 2;
+}
+
+.middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  margin: 80px;
+  flex: 1;
+  height: 271px;
+  gap: 100px;
+}
+
+.column {
+  color: #ffffff;
+  gap: 20px;
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Evenly distribute items with space between them */
+  font-weight: 400; /* Correct syntax for font-weight */
+  height: 80%; /* Ensure the column has enough height for spacing */
+}
+
+.column a:hover {
+  color: white;
+}
+
+/* Right Section */
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  gap: 2rem;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: black;
+}
+
+.icon:hover {
+  background-color: #555;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .column {
+    text-align: right;
+    gap: 0px;
+  }
+  .middle {
+    gap: 0px;
+  }
+  .left {
+    text-align: left;
+  }
+  .middle .column:nth-child(2) {
+    text-align: left; /* Example: align text to the right */
+  }
+  .container > *:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 216px;
+    width: 1px;
+    background-color: #555;
+  }
+  .middle {
+    margin: 0px;
+  }
+}
