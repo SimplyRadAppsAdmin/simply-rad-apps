@@ -1,4 +1,11 @@
 .container {
+  background: radial-gradient(
+    circle,
+    rgba(80, 74, 74, 0.2) 40%,
+    /* Subtle white glow at the center */ rgba(0, 0, 0, 0.8) 120%,
+    /* Gradual fade to darker black */ rgba(0, 0, 0, 1) 90%
+      /* Solid black at the edges */
+  );
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +30,7 @@
 .left {
   text-align: center;
   flex: 2;
+  padding-left: 50px;
 }
 
 .middle {

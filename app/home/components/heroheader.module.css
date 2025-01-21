@@ -4,15 +4,19 @@
   display: flex;
   justify-content: center;
   background-color: transparent;
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 0) 20%,
-    rgba(0, 0, 0, 0.8) 60%,
-    rgba(0, 0, 0, 1) 100%
-  );
   overflow: hidden; /* Prevent video overflow */
+  border-bottom-left-radius: 120% 30%;
+  border-bottom-right-radius: 120% 30%;
 }
-
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px; /* Height of the fade */
+  background: linear-gradient(to bottom, transparent, #17042e);
+}
 .hero::before {
   content: "";
   position: absolute;
@@ -21,14 +25,16 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(
-      90deg,
-      rgba(223, 10, 127, 1),
-      rgba(106, 10, 223, 1)
-    ),
-    #2c2c2c;
-  opacity: 0.14; /* Apply transparency to just the gradient */
-  z-index: 1; /* Ensure it sits behind the content */
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    to bottom,
+    transparent,
+    rgba(223, 10, 127, 1),
+    rgb(25, 2, 54, 0.2)
+  );
+  border-bottom-left-radius: 120% 10%;
+  border-bottom-right-radius: 120% 10%;
+
+  opacity: 0.14;
+  z-index: 1;
 }
 
 .backgroundVideo {
@@ -37,6 +43,10 @@
   left: 0;
   width: 100%;
   height: 100%;
+  border-bottom-left-radius: 120% 30%;
+  border-bottom-right-radius: 120% 30%;
+  background: linear-gradient(to bottom, transparent, #17042e);
+
   opacity: 0.3;
   object-fit: cover; /* Ensures the video covers the entire section */
   z-index: -1; /* Puts the video behind the content */
