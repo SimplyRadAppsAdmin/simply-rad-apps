@@ -26,6 +26,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   max-width: 1200px; /* Limit width for larger screens */
+  justify-items: center;
 }
 
 /* Medium screens (e.g., tablets) */

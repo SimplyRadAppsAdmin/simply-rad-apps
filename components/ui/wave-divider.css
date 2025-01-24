@@ -1,0 +1,9 @@
+/* RepeatedSineWaveWithLine.css */
+
+.waveContainer {
+  margin-inline: 8%;
+  background-color: transparent;
+}
+.sineWaveSvg {
+  display: block;
+}

@@ -5,6 +5,11 @@
   align-content: center;
   background-color: transparent;
   font-family: "Jost", Arial, sans-serif;
+  height: 90vh;
+}
+.heroContent {
+  justify-items: center;
+  display: grid;
 }
 
 .heroContent h1 {

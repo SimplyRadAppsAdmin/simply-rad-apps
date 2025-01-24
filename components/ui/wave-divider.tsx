@@ -1,22 +1,21 @@
-// components/RepeatedSineWaveWithLine.jsx
-
+// RepeatedSineWaveWithLine.jsx
 import React from "react";
+import "./wave-divider.css"; // <-- Import the CSS
 
 const RepeatedSineWaveWithLine = ({
   width = 1440,
   height = 320,
-  amplitude = 40, // "height" of wave peaks
-  frequency = 2, // number of full sine cycles across the width
+  amplitude = 40,
+  frequency = 2,
   waveStrokeColor = "#D8BFD8",
   waveStrokeWidth = 4,
-  lineStrokeColor = "#000", // color of the horizontal line
+  lineStrokeColor = "#000",
   lineStrokeWidth = 1,
 }) => {
-  // The y-value around which the wave oscillates.
   const baseY = height / 2;
 
-  // Generate points for the sine wave
-  const step = 10; // smaller step => smoother wave, more points
+  // Generate sine wave points
+  const step = 10;
   const points = [];
   for (let x = 0; x <= width; x += step) {
     const angle = (2 * Math.PI * frequency * x) / width;
@@ -24,7 +23,7 @@ const RepeatedSineWaveWithLine = ({
     points.push({ x, y });
   }
 
-  // Convert points to path data (start at the first point, then line to each next point)
+  // Convert points to path data
   const pathData = points.reduce((acc, point, i) => {
     return i === 0
       ? `M ${point.x},${point.y}`
@@ -32,23 +31,21 @@ const RepeatedSineWaveWithLine = ({
   }, "");
 
   return (
-    <div style={{ margin: "8%" }}>
+    // <div className="sineWaveContainer">
+    <div className="waveContainer">
       <svg
         width="100%"
         height="auto"
         viewBox={`0 0 ${width} ${height}`}
         preserveAspectRatio="none"
-        style={{ display: "block" }}
+        className="sineWaveSvg"
       >
-        {/* The Sine Wave */}
         <path
           d={pathData}
           fill="none"
           stroke={waveStrokeColor}
           strokeWidth={waveStrokeWidth}
         />
-
-        {/* The Horizontal Line (drawn at the same baseY or wherever you want) */}
         <line
           x1={0}
           y1={baseY}
@@ -59,6 +56,7 @@ const RepeatedSineWaveWithLine = ({
         />
       </svg>
     </div>
+    // </div>
   );
 };
 

@@ -5,6 +5,7 @@ import OurBackground from "./components/our_background";
 import ToolBelt from "./components/toolbelt";
 import LetsTalk from "./components/letsTalk";
 import Footer from "./components/footer";
+import "./page.css";
 
 export default async function Home() {
   return (
@@ -17,16 +18,19 @@ export default async function Home() {
         }
       />
       <WhatWeDo />
-      <RepeatedSineWave
-        width={1440}
-        height={320}
-        amplitude={10}
-        frequency={6}
-        waveStrokeColor="#6A0ADF66"
-        waveStrokeWidth={2}
-        lineStrokeColor="#6A0ADF66"
-        lineStrokeWidth={2}
-      />
+      <div className="sineWaveContainer">
+        <RepeatedSineWave
+          width={1440}
+          height={320}
+          amplitude={10}
+          frequency={6}
+          waveStrokeColor="#6A0ADF66"
+          waveStrokeWidth={2}
+          lineStrokeColor="#6A0ADF66"
+          lineStrokeWidth={2}
+        />
+      </div>
+
       <OurBackground
         title={"Your product gets the focus it deserves from a talented team"}
         subtitle={
