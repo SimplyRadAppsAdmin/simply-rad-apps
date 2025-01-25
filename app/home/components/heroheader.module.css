@@ -103,7 +103,6 @@
 
   .card {
     margin-top: 20%;
-    background-color: yellow;
     flex-direction: row;
   }
 }
