@@ -118,7 +118,7 @@
   }
 
   .heroContent h1 {
-    font-size: 2.5rem; /* Further reduce font size for mobile screens */
+    font-size: 1.5rem; /* Further reduce font size for mobile screens */
   }
 
   .heroContent p {
@@ -128,6 +128,10 @@
   .heroButton {
     font-size: 0.75rem; /* Adjust button font size for mobile */
     padding: 8px 16px; /* Adjust padding for mobile */
+  }
+  .card {
+    width: 300px;
+    margin-top: 20%;
   }
 }
 

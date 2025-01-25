@@ -10,8 +10,7 @@ interface LogoButtonProps {
 const LogoButton: React.FC<LogoButtonProps> = ({ Icon, text }) => {
   return (
     <div className={styles.button}>
-      <Icon className={styles.icon} color="black" size={50} />{" "}
-      {/* Render the icon */}
+      <Icon className={styles.icon} color="black" /> {/* Render the icon */}
       <span className={styles.text}>{text}</span>
     </div>
   );

@@ -52,3 +52,16 @@
 .iconContainer:hover {
   border-color: rgba(255, 255, 255, 0.6);
 }
+
+@media (max-width: 768px) {
+  .iconContainer {
+    width: 38px;
+    height: 38px;
+  }
+  .cardButton {
+    padding: 16px 32px;
+    font-size: 14px;
+    height: 56px;
+    max-width: 300px;
+  }
+}

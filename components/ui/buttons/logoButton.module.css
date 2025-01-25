@@ -17,7 +17,21 @@
   transform: scale(1.05);
 }
 
+.icon {
+  font-size: 50px;
+}
+
 .text {
   font-size: 16px;
   font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .button {
+    width: 250px;
+    height: 60px;
+  }
+  .icon {
+    font-size: 30px;
+  }
 }
