@@ -68,8 +68,8 @@
 }
 
 .card {
-  margin-top: 80px;
-  width: 30%;
+  justify-items: center;
+  display: grid;
 }
 /* Medium screens (e.g., tablets) */
 @media (max-width: 1300px) {
@@ -83,16 +83,6 @@
 
   .heroContent p {
     font-size: 1rem; /* Reduce font size for smaller screens */
-  }
-
-  .heroButton {
-    font-size: 0.875rem; /* Adjust button font size for tablets */
-    padding: 10px 20px;
-  }
-  .card {
-    width: 401px;
-    justify-self: center;
-    margin-top: 10%;
   }
 }
 
@@ -112,9 +102,9 @@
   }
 
   .card {
-    width: 100%;
     margin-top: 20%;
-    justify-items: center;
+    background-color: yellow;
+    flex-direction: row;
   }
 }
 
