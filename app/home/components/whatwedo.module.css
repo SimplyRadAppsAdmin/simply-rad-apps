@@ -52,6 +52,7 @@
 .content p {
   font-size: 1.2rem;
   color: #e5e1e1;
+  margin-right: 20px;
 }
 
 /* Cards/Buttons */
@@ -149,5 +150,11 @@
   .iconContainer {
     width: 28px;
     height: 28px;
+  }
+  .content h2 {
+    font-size: 2.5rem;
+    /* font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 20px; */
   }
 }
