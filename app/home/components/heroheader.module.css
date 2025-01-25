@@ -67,20 +67,6 @@
   padding-left: 9px;
 }
 
-.heroButton {
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.heroButton:hover {
-  background-color: #0056b3;
-}
-
 .card {
   margin-top: 80px;
   width: 30%;
@@ -125,13 +111,10 @@
     font-size: 0.875rem; /* Further reduce font size for mobile screens */
   }
 
-  .heroButton {
-    font-size: 0.75rem; /* Adjust button font size for mobile */
-    padding: 8px 16px; /* Adjust padding for mobile */
-  }
   .card {
     width: 300px;
     margin-top: 20%;
+    justify-content: center;
   }
 }
 
