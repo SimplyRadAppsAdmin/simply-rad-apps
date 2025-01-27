@@ -17,10 +17,8 @@ interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 const modalStyle = {
-  position: "absolute" as "absolute",
-  border: "1px solid #797676",
+  position: "fixed" as "fixed", // Use "fixed" to ensure it stays within the viewport
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
@@ -29,7 +27,10 @@ const modalStyle = {
   boxShadow: 24,
   p: 4,
   borderRadius: "16px",
+  border: "1px solid #797676",
   width: "90%",
+  maxHeight: "90vh", // Limit the height to 90% of the viewport height
+  overflowY: "auto", // Enable vertical scrolling if content overflows
 };
 
 const cardContent = {
