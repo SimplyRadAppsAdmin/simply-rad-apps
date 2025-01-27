@@ -3,11 +3,16 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import styles from "./navbar.module.css";
+import NavModal from "./nav_modal";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleButtonRef = useRef<HTMLButtonElement>(null); // Add ref for the toggle button
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const handleOpen = () => setModalOpen(true);
+  const handleClose = () => setModalOpen(false);
 
   // Toggle menu state
   const toggleMenu = () => {
@@ -35,6 +40,7 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
+      <NavModal isOpen={isModalOpen} onClose={handleClose} />
       {/* Brand (left) */}
       <div className={styles.brand}>
         <Link href="/">
@@ -65,7 +71,9 @@ const Navbar = () => {
         className={`${styles.buttonsContainer} ${isOpen ? styles.open : ""}`}
       >
         <div className={styles.buttonsBox}>
-          <button className={styles.navButton}>our offers</button>
+          <button onClick={handleOpen} className={styles.navButton}>
+            our offers
+          </button>
           <button className={styles.navButton}>our work</button>
           <button className={styles.navButton}>our history</button>
           <div className={styles.verticalSpacer}></div>
