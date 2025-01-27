@@ -48,7 +48,7 @@ const cardStyles = {
 };
 
 const overlayStyles = {
-  marginBottom: "20px",
+  marginBottom: "10px",
   marginRight: "10px",
   marginLeft: "20px",
   display: "flex",
