@@ -29,7 +29,7 @@ const modalStyle = {
   borderRadius: "16px",
   border: "1px solid #797676",
   width: "90%",
-  maxHeight: "90vh", // Limit the height to 90% of the viewport height
+  maxHeight: "80vh", // Limit the height to 90% of the viewport height
   overflowY: "auto", // Enable vertical scrolling if content overflows
 };
 
