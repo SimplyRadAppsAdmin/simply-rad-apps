@@ -53,8 +53,6 @@ const overlayStyles = {
   marginLeft: "20px",
   display: "flex",
   flexDirection: "row",
-  alignContent: "space-between",
-  alignItems: "center",
   justifyContent: "space-between",
 };
 
