@@ -20,6 +20,7 @@ interface ModalProps {
 
 const modalStyle = {
   position: "absolute" as "absolute",
+  border: "1px solid #797676",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
